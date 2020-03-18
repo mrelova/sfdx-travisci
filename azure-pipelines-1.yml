@@ -13,7 +13,8 @@ steps:
 - script: |
     echo "Hello, world!"
     echo "Node version: " `node --version`
-    sudo npm install sfdx-cli --global
+    npm install sfdx-cli
+    echo 'y' | sfdx plugins:install sfpowerkit
   displayName: 'Install sfdx manually'
 - task: sfpwowerscript-installsfdx-task@5
   displayName: Install SFDX
