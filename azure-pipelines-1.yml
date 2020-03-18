@@ -10,7 +10,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: 
+- script: |
     echo "Hello, world!"
     node --version
     npm install sfdx-cli --global
