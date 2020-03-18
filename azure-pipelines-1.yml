@@ -12,6 +12,18 @@ pool:
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
+- task: sfpwowerscript-installsfdx-task@5
+  inputs:
+    isTelemetryEnabled: true
+
+- task: sfpwowerscript-managescratchorg-task@5
+  inputs:
+    action: 'Create'
+    config_file_path: 'config/project-scratch-def.json'
+    alias: 'scratchorg'
+    devhub_alias: 'HubOrg'
+    maintainorg: 'delete'
+    isTelemetryEnabled: true
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
