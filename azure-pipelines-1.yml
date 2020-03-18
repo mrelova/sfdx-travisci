@@ -22,12 +22,6 @@ steps:
     package: 'force-di'
     isTelemetryEnabled: true
 
-- task: sfpwowerscripts-analyzewithpmd-task@4
-  inputs:
-    directory: 'force-di'
-    isToBreakBuild: true
-    isTelemetryEnabled: true
-
     
 - task: sfpwowerscript-authenticateorg-task@7
   inputs:
