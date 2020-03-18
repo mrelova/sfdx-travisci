@@ -1,4 +1,14 @@
 # Starter pipeline
+- task: sfpwowerscript-installsfdx-task@5
+  inputs:
+    isTelemetryEnabled: true
+
+- task: sfpwowerscript-incrementversionnumber-task@5
+  inputs:
+    segment: 'BuildNumber'
+    appendBuildNumber: true
+    set_build_number: true
+    isTelemetryEnabled: true
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
