@@ -15,6 +15,23 @@ steps:
 - task: sfpwowerscript-installsfdx-task@5
   inputs:
     isTelemetryEnabled: true
+- task: sfpwowerscript-validatedxunlockedpackage-task@2
+  inputs:
+    package: 'force-di'
+    isTelemetryEnabled: true
+
+- task: sfpwowerscripts-analyzewithpmd-task@4
+  inputs:
+    directory: 'force-di'
+    isToBreakBuild: true
+    isTelemetryEnabled: true
+
+    
+- task: sfpwowerscript-authenticateorg-task@7
+  inputs:
+    method: 'ServiceConnection'
+    alias: 'HubOrg'
+    isTelemetryEnabled: true
 
 - task: sfpwowerscript-managescratchorg-task@5
   inputs:
