@@ -13,9 +13,11 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 - task: sfpwowerscript-installsfdx-task@5
+  displayName: Install SFDX
   inputs:
     isTelemetryEnabled: true
 - task: sfpwowerscript-validatedxunlockedpackage-task@2
+  displayName: Validates An Unlocked Package for Metadata Coverage
   inputs:
     package: 'force-di'
     isTelemetryEnabled: true
