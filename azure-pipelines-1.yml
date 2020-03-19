@@ -14,7 +14,10 @@ steps:
     echo "Hello, world!"
     echo "Node version: " `node --version`
     npm install sfdx-cli
-    echo 'y' | sfdx plugins:install sfpowerkit
+    echo "Authenticating with Org"
+    sfdx force:auth:jwt:grant --clientid 3MVG9LBJLApeX_PBOEVRs89aNZgKlbBizEoN4A4eUtu2zIMilxp4hK.wZXHcJtk7xoAppgvHQnQIEFzoZaHGa  --username michaelrelova@rockconnections.com.cx --jwtkeyfile certificates/server.key --setdefaultdevhubusername
+
+
   displayName: 'Install sfdx manually'
 - task: sfpwowerscript-installsfdx-task@5
   displayName: Install SFDX
